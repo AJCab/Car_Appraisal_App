@@ -37,7 +37,7 @@ def loadData(filename):
 def appraise():
 
     # Make = make_opt.get()
-    df = pickle.load(open("default_df.sav", 'rb'))
+    df = pickle.load(open("Data/default_df.sav", 'rb'))
     print(makeVar.get(), modelVar.get(), vehicleTypeVar.get(), GearboxVar.get(), FuelVar.get(), YearInput.get(), DamageVar.get(), MilesInput.get(), HPInput.get())
 
     print(df.shape)
@@ -63,7 +63,7 @@ window = Tk()
 window.geometry("500x500")
 
 window.title("CSC 310 Car Appraiser")
-data = loadData("data_structures-knn3.sav")
+data = loadData("Data/data_structures-knn3.sav")
 
 title = Label(window, textvariable=StringVar(window,"Enter your vehicles information"))
 MakeList = [key for key in data[5].keys()]
